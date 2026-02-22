@@ -1,62 +1,64 @@
 /* src/Pages/Features.css */
 
 .features-container {
-  padding: 50px 20px;
+  padding: 60px 20px;
   text-align: center;
+  background: #f9f9f9; /* light background */
+  min-height: 63.3vh; /* ensures footer stays at bottom */
 }
 
-.features-container h1 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
+.features-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+  color: #222;
 }
 
 .features-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .feature-card {
-  background-color: #f5f5f5;
+  background: white;
   padding: 30px 20px;
-  border-radius: 12px;
-  width: 300px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .feature-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
 
 .feature-card h2 {
+  font-size: 1.8rem;
   margin-bottom: 15px;
+  color: #111;
 }
 
 .feature-card p {
-  margin-bottom: 20px;
+  font-size: 1rem;
   color: #555;
+  margin-bottom: 20px;
+  line-height: 1.5;
 }
 
-.feature-card button {
-  padding: 10px 20px;
+.feature-btn {
+  background: #4f46e5; /* Indigo-600 */
+  color: white;
   border: none;
-  border-radius: 6px;
-  background-color: #007bff;
-  color: #fff;
+  padding: 10px 25px;
+  font-size: 1rem;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background 0.3s ease;
 }
 
-.feature-card button:hover {
-  background-color: #0056b3;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .features-grid {
-    flex-direction: column;
-    align-items: center;
-  }
+.feature-btn:hover {
+  background: #30a38e; /* Indigo-800 */
 }

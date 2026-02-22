@@ -1,39 +1,64 @@
-.features {
-  padding: 80px 10%;
+/* src/Pages/Features.css */
+
+.features-container {
+  padding: 60px 20px;
   text-align: center;
+  background: #f9f9f9; /* light background */
+  min-height: 63.3vh; /* ensures footer stays at bottom */
 }
 
-.features h2 {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 36px;
+.features-title {
+  font-size: 3rem;
+  font-weight: bold;
   margin-bottom: 50px;
-  background: linear-gradient(90deg,#00f2fe,#4facfe);
-  -webkit-background-clip: text;
-  color: transparent;
+  color: #222;
 }
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .feature-card {
-  background: #2c3e50;
-  padding: 30px;
-  border-radius: 20px;
-  transition: 0.3s;
+  background: white;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .feature-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
 
-.feature-card h3 {
+.feature-card h2 {
+  font-size: 1.8rem;
   margin-bottom: 15px;
-  color: #00f2fe;
+  color: #111;
 }
 
 .feature-card p {
-  color: #ccc;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.feature-btn {
+  background: #4f46e5; /* Indigo-600 */
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.feature-btn:hover {
+  background: #30a38e; /* Indigo-800 */
 }

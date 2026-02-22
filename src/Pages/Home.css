@@ -1,24 +1,15 @@
 /* Full page layout */
 .home {
-
 display: flex;
 flex-direction: column;
-
 min-height: 100vh;
-
 background: #f4f7fb;
-
 }
-
 
 /* Content section */
-
 .content {
-
 flex: 1;
-
 }
-
 
 /* Section spacing */
 

@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 50px;
+  padding: 2px 20px;
   background: linear-gradient(90deg, #ff6ec4, #7873f5);
   color: white;
   font-family:'Times New Roman', Times, serif;
@@ -34,19 +34,20 @@
   padding: 8px 20px;
   border-radius: 30px;
   transition: all 0.3s ease;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 /* Active page link */
 .nav-links li a.active {
   background-color: #fff;
-  color: #7873f5;
+  color: blueviolet;
+  font-weight: bold;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 /* Hover effect */
 .nav-links li a:hover {
-  background-color: rgba(255,255,255,0.3);
+  background-color: #ff6ec4;
   color: #fff;
   transform: translateY(-3px);
   box-shadow: 0 6px 12px rgba(0,0,0,0.2);

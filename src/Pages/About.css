@@ -3,6 +3,7 @@
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
+  min-height: 66vh; /*ensures footer stays at bottom */
 }
 
 .about-container h1 {

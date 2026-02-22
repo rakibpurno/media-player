@@ -5,7 +5,7 @@ import Features from "./Pages/Features";
 import Pricing from "./Pages/Pricing";
 import About from "./Pages/About";
 import Home from "./Pages/Home";
-import "./App.css"; // your global CSS
+import "./App.css"; // global CSS
 
 function App() {
   return (

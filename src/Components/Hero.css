@@ -1,6 +1,6 @@
 .hero {
-  min-height: 80vh; /* hero section fills most of page */
-  padding: 20px;
+  min-height: 79.7vh; /* hero section fills most of page */
+  padding: 0px;
   background-image: url("../Assets/Image.jpeg");
   background-size: cover;
   background-position: center;
@@ -21,12 +21,12 @@
 .video-layout {
   position: relative;
   z-index: 2;
-  width: 90%;
-  max-width: 1200px;
+  width: 80%;
+  max-width: 1000px;
   display: flex;
-  gap: 30px;
+  gap: 60px;
   color: white;
-  max-height: 80vh; /* video layout will not exceed 80% of viewport height */
+  max-height: 100vh; /* video layout will not exceed 80% of viewport height */
 }
 
 /* PLAYER SECTION */

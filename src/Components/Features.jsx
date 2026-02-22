@@ -1,31 +1,33 @@
+// src/Pages/Features.jsx
+import React from "react";
 import "./Features.css";
 
-export default function Features() {
+function Features() {
   return (
-    <section className="features">
-      <h2>Kye Features</h2>
-
+    <div className="features-container">
+      <h1 className="features-title">Our Features</h1>
+      
       <div className="features-grid">
         <div className="feature-card">
-          <h3>High Quality Audio</h3>
-          <p>Experience crystal clear sound with advanced audio engine.</p>
+          <h2> Fast Performance</h2>
+          <p>Our app is lightning fast and optimized for efficiency.</p>
+          <button className="feature-btn">Learn More</button>
         </div>
 
         <div className="feature-card">
-          <h3>Fast Performance</h3>
-          <p>Optimized for smooth and lag-free playback.</p>
+          <h2> Secure</h2>
+          <p>We ensure your data is safe and secure at all times.</p>
+          <button className="feature-btn">Learn More</button>
         </div>
 
         <div className="feature-card">
-          <h3>Secure Media</h3>
-          <p>Your files are protected with secure storage system.</p>
-        </div>
-
-        <div className="feature-card">
-          <h3>Responsive Design</h3>
-          <p>Works perfectly on desktop, tablet, and mobile devices.</p>
+          <h2> Customizable</h2>
+          <p>Easily adapt the app to your needs with flexibility.</p>
+          <button className="feature-btn">Learn More</button>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
+
+export default Features;

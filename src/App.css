@@ -1,17 +1,21 @@
-/* Ensure html/body/root fill full height */
-html, body, #root {
-  height: 100%;
-  margin: 0;
-}
+/* src/App.css */
 
-/* Flex layout for sticky footer */
-.App {
+/* Main container fills full viewport and uses flex column */
+.app-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* full viewport height */
 }
 
-/* The page content grows to push footer down */
-.content-wrapper {
-  flex: 1; /* takes all remaining vertical space */
+/* Page content grows to fill remaining space */
+.page-content {
+  flex: 1;
+}
+
+/* Footer styling */
+footer {
+  background: linear-gradient(90deg,#ff512f,#dd2476);
+  color: white;
+  text-align: center;
+  padding: 5px 0;
 }

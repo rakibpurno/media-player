@@ -1,7 +1,29 @@
-.footer{
+/* src/Components/Footer.css
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+} */
+ .footer{
 margin-top:60px;
 padding:10px;
 text-align:center;
 background:linear-gradient(90deg,#ff512f,#dd2476);
 color:white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
 }

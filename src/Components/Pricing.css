@@ -1,39 +1,28 @@
+.section h2{
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     font-size: 36px;
+}
 .cards{
-
 display:flex;
 gap:30px;
 justify-content:center;
-
 }
 
 .card{
-
 background:rgba(255,255,255,0.1);
-
 padding:40px;
-
 border-radius:20px;
-
 transition:.3s;
-
 }
 
 .card:hover{
-
 transform:translateY(-15px);
-
 background: linear-gradient(90deg,#00f2fe,#4facfe);
-
 }
 
 .card button{
-
 padding:10px 20px;
-
 border:none;
-
 margin-top:20px;
-
 cursor:pointer;
-
 }

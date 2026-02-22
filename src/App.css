@@ -1,19 +1,17 @@
-body{
-
-margin:0;
-font-family: 'Poppins', sans-serif;
-
-background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-
-color:white;
-
+/* Ensure html/body/root fill full height */
+html, body, #root {
+  height: 100%;
+  margin: 0;
 }
 
-.section{
+/* Flex layout for sticky footer */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full viewport height */
+}
 
-width:90%;
-max-width:1200px;
-margin:auto;
-padding:80px 0;
-
+/* The page content grows to push footer down */
+.content-wrapper {
+  flex: 1; /* takes all remaining vertical space */
 }

@@ -4,7 +4,8 @@
 }
 
 .features h2 {
-  font-size: 40px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 36px;
   margin-bottom: 50px;
   background: linear-gradient(90deg,#00f2fe,#4facfe);
   -webkit-background-clip: text;

@@ -1,0 +1,73 @@
+/* Navbar general styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 50px;
+  background: linear-gradient(90deg, #ff6ec4, #7873f5);
+  color: white;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 17px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo */
+.logo h2 {
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+/* Nav links styling */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+/* Link buttons */
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+/* Active page link */
+.nav-links li a.active {
+  background-color: #fff;
+  color: #7873f5;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Hover effect */
+.nav-links li a:hover {
+  background-color: rgba(255,255,255,0.3);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .nav-links li a {
+    width: 100%;
+    text-align: center;
+  }
+}

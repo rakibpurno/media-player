@@ -1,39 +1,76 @@
-.about-container {
-  padding: 50px 20px;
-  text-align: center;
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  min-height: 70vh;
+  background: linear-gradient(135deg, #fef9c3, #dbeafe); /* warm gradient */
+}
+
+.about-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 50px 40px;
   max-width: 800px;
-  margin: 0 auto;
-  min-height: 66vh; /*ensures footer stays at bottom */
+  border-radius: 25px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
-.about-container h1 {
-  font-size: 2.5rem;
+.about-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+}
+
+.about-card h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #1e293b; /* dark blue-gray */
   margin-bottom: 20px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.1);
 }
 
-.about-container p {
+.about-card p {
   font-size: 1.2rem;
-  margin-bottom: 30px;
-  color: #555;
+  line-height: 1.8;
+  color: #475569;
+  margin-bottom: 35px;
 }
 
-.about-container button {
-  padding: 10px 25px;
-  border: none;
-  border-radius: 6px;
-  background-color: #28a745;
+.about-btn {
+  background: linear-gradient(90deg, #4f46e5, #3b82f6); /* Indigo to blue gradient */
   color: #fff;
+  border: none;
+  padding: 15px 35px;
+  font-size: 1.1rem;
+  border-radius: 12px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
-.about-container button:hover {
-  background-color: #1e7e34;
+.about-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(90deg, #3b82f6, #4f46e5); /* reversed gradient on hover */
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .about-container {
-    padding: 30px 10px;
+  .about-card {
+    padding: 40px 25px;
+  }
+
+  .about-card h1 {
+    font-size: 2.2rem;
+  }
+
+  .about-card p {
+    font-size: 1rem;
+  }
+
+  .about-btn {
+    padding: 12px 28px;
+    font-size: 1rem;
   }
 }

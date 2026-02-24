@@ -1,64 +1,77 @@
-/* src/Pages/Features.css */
-
-.features-container {
-  padding: 60px 20px;
-  text-align: center;
-  background: #f9f9f9; /* light background */
-  min-height: 63.3vh; /* ensures footer stays at bottom */
+.features-section {
+  padding: 100px 20px 40px 20px; /* top padding increased for navbar */
+  min-height: calc(100vh - 110px); /* subtract approx navbar+footer height */
+  box-sizing: border-box;
 }
 
 .features-title {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 50px;
-  color: #222;
+  font-size: 2rem;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.features-subtitle {
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+  text-align: center;
 }
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* responsive */
+  gap: 15px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .feature-card {
-  background: white;
-  padding: 30px 20px;
+  padding: 18px 12px;
   border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 180px; /* slightly reduced */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .feature-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
-.feature-card h2 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-  color: #111;
+.feature-icon {
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+}
+
+.features-section h2 {
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
 
 .feature-card p {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 20px;
-  line-height: 1.5;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+  line-height: 1.4;
 }
 
 .feature-btn {
-  background: #4f46e5; /* Indigo-600 */
-  color: white;
-  border: none;
-  padding: 10px 25px;
-  font-size: 1rem;
-  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 0.8rem;
   cursor: pointer;
-  transition: background 0.3s ease;
+  border: none;
+  border-radius: 5px;
+  color: white;
 }
 
 .feature-btn:hover {
-  background: #30a38e; /* Indigo-800 */
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }

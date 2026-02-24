@@ -1,12 +1,17 @@
 .pricing-container {
-  padding: 100px 20px;
+  height: 100vh;              /* full screen */
+  padding: 60px 20px 40px;    /* smaller spacing */
   text-align: center;
   background: linear-gradient(135deg, #4f46e5, #9333ea);
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow: hidden;           /* no scroll */
 }
-
 .pricing-title {
-  font-size: 3rem;
+  font-size: 2.2rem;
   margin-bottom: 50px;
 }
 
@@ -21,22 +26,14 @@
 }
 
 .toggle-btn {
-  padding: 10px 30px;
+  padding: 8px 22px;
+  font-size: 1.2rem;
+  font-weight: 8s00;
   cursor: pointer;
-  z-index: 2;
-  font-weight: 500;
 }
 
 .slider {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  height: 80%;
-  width: 50%;
-  background: white;
-  border-radius: 30px;
-  transition: 0.4s ease;
-  z-index: 1;
+  height: 75%;
 }
 
 .slider.right {
@@ -44,31 +41,28 @@
 }
 
 .toggle-btn.active {
-  color: #4f46e5;
+  color: #6be546;
   font-weight: bold;
 }
 
 /* Grid */
 .pricing-grid {
-  margin-top: 60px;
+  margin-top: 40px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 40px;
-  max-width: 1000px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
 
 /* Card */
 .pricing-card {
-  position: relative;
-  padding: 50px 30px;
-  border-radius: 20px;
+  padding: 30px 50px;   /* reduced */
+  border-radius: 18px;
   backdrop-filter: blur(20px);
   background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-  transition: all 0.4s ease;
-  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
 
 .pricing-card:hover {
@@ -98,37 +92,28 @@
 }
 
 .amount {
-  font-size: 3rem;
-  font-weight: bold;
+  font-size: 2.2rem;
 }
 
 .period {
-  font-size: 1rem;
-  opacity: 0.8;
+  font-size: 0.9rem;
 }
 
 /* List */
 .pricing-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0;
+  margin: 15px 0;
 }
 
 .pricing-card li {
-  margin: 10px 0;
+  margin: 6px 0;
+  font-size: 0.9rem;
 }
 
 /* Button */
 .subscribe-btn {
-  margin-top: 20px;
-  padding: 12px 30px;
-  border: none;
-  border-radius: 30px;
-  background: white;
-  color: #4f46e5;
-  font-weight: bold;
+  padding: 10px 22px;
+  font-size: 0.9rem;
   cursor: pointer;
-  transition: 0.3s;
 }
 
 .subscribe-btn:hover {

@@ -1,6 +1,6 @@
 .navbar {
   position: sticky;
-  top: 12px; /* floating effect */
+  top: 5px; /* floating effect */
   width: 95%;
   margin: 0 auto;
   display: flex;
@@ -15,13 +15,9 @@
   transition: all 0.3s ease;
 }
 .logo h2 {
-  font-size: 1.3rem; /* smaller */
+  font-size: 1.7rem;
+  color: #ff6ec4;
   font-weight: 700;
-  background: linear-gradient(90deg, #ff6ec4, #7873f5, #4f46e5);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradientMove 4s linear infinite;
   cursor: pointer;
 }
 

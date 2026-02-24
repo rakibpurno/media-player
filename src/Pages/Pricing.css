@@ -27,7 +27,8 @@
 
 .toggle-btn {
   padding: 8px 22px;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  font-weight: 8s00;
 }
 
 .slider {
@@ -56,7 +57,7 @@
 
 /* Card */
 .pricing-card {
-  padding: 30px 20px;   /* reduced */
+  padding: 30px 50px;   /* reduced */
   border-radius: 18px;
   backdrop-filter: blur(20px);
   background: rgba(255, 255, 255, 0.1);

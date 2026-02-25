@@ -7,7 +7,7 @@
   padding: 90px 20px 40px 20px; /* push content below navbar */
   text-align: center;
   background: #f9f9f9; /* light background */
-  min-height: 63.3vh; /* ensures footer stays at bottom */
+  min-height: 77vh; /* ensures footer stays at bottom */
   background: linear-gradient(135deg, #e0f7fa, #fff0f6);
   box-sizing: border-box;
 }

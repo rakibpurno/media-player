@@ -1,19 +1,20 @@
 .navbar {
   position: sticky;
-  top: 5px; /* floating effect */
+  top: 5px; 
   width: 95%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 20px; /* smaller */
+  padding: 5px 20px; 
   background: linear-gradient(135deg, #1e1e2f, #2a2a40);
-  border-radius: 20px; /* pill style */
+  border-radius: 20px; 
   backdrop-filter: blur(12px);
   z-index: 1000;
   box-shadow: 0 8px 25px rgba(0,0,0,0.25);
   transition: all 0.3s ease;
 }
+
 .logo h2 {
   font-size: 1.7rem;
   color: #ff6ec4;

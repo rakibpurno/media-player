@@ -69,6 +69,7 @@ export default function Navbar() {
   return (
 
     <nav className="navbar">
+      <div class="navbar-container">
 
       <div className="logo">
         <h2>MediaPlayer</h2>
@@ -94,6 +95,7 @@ export default function Navbar() {
         ))}
 
       </ul>
+      </div>
 
     </nav>
 

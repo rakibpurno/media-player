@@ -1,3 +1,5 @@
+
+
 /* Overall container */
 .watch-container {
   background: #0f0f0f;
@@ -5,6 +7,9 @@
   min-height: 100vh;
   padding: 20px 40px;
   font-family: 'Arial', sans-serif;
+   padding-top: 120px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Layout */
@@ -25,11 +30,12 @@
 /* Video player */
 .watch-video {
   width: 100%;
+  padding: 5px;
   border-radius: 12px;
   background: #000;
   max-height: 600px;
   object-fit: cover;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  box-shadow: 0 4px 15px #9233ea43;
 }
 
 /* Video title */
@@ -166,11 +172,14 @@
 
 /* Right sidebar container */
 .watch-sidebar {
-  flex: 1.5;
-  min-width: 250px;
-  max-height: 85vh;
+  flex: 1;
+  /* max-width: 450px; */
+  width: 100%;
+  max-height: 445px;  
   overflow-y: auto;
-  padding-right: 5px;
+  background: linear-gradient(135deg,#1e1e2f,#2a2a40);
+  padding: 20px;
+  border-radius: 15px;
 }
 
 /* Sidebar title */
@@ -186,11 +195,12 @@
 /* Individual recommended video */
 .sidebar-video {
   display: flex;
-  gap: 12px;
+   gap: 8px;
+  padding: 6px;
   margin-bottom: 15px;
   cursor: pointer;
-  padding: 8px;
   border-radius: 8px;
+  align-items:center;
   transition: background 0.3s;
 }
 
@@ -201,8 +211,8 @@
 
 /* Thumbnail */
 .sidebar-video img {
-  width: 140px;
-  height: 80px;
+    width: 120px;
+  height: 70px;
   border-radius: 6px;
   object-fit: cover;
 }
@@ -215,7 +225,7 @@
 }
 
 .sidebar-video h4 {
-  font-size: 14px;
+  font-size: 13px;
   margin: 0;
   font-weight: 600;
   color: #fff;
@@ -223,13 +233,13 @@
 }
 
 .sidebar-video p {
-  font-size: 12px;
+    font-size: 11px;
   color: #aaa;
   margin: 4px 0 0 0;
 }
 
 .sidebar-video span {
-  font-size: 12px;
+    font-size: 11px;
   color: #777;
   margin-top: 2px;
 }
@@ -284,4 +294,12 @@
     max-height: none;
     margin-bottom: 20px;
   }
+}
+.watch-video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
 }

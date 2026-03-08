@@ -1,8 +1,10 @@
-import { useState, useRef } from "react";
+import { useState, useMemo } from "react";
+import { Plyr } from "plyr-react";
+import "plyr-react/plyr.css";
 import "./Watch.css";
 
 export default function Watch() {
-  // 🔹 Video list
+
   const videos = [
     {
       id: 1,
@@ -51,18 +53,37 @@ export default function Watch() {
   const [dislikes, setDislikes] = useState(120);
   const [comments, setComments] = useState([]);
   const [commentInput, setCommentInput] = useState("");
-  const [embedCode, setEmbedCode] = useState(""); // For generated embed code
-  const videoRef = useRef(null);
+  const [embedCode, setEmbedCode] = useState("");
 
   const currentVideo = videos[currentVideoIndex];
 
+  /* ✅ Memoized video source (prevents Plyr crash) */
+  const videoSource = useMemo(() => {
+    return {
+      type: "video",
+      sources: [
+        {
+          src: currentVideo.url,
+          type: "video/mp4",
+        },
+      ],
+    };
+  }, [currentVideo]);
+
   const addComment = () => {
     if (!commentInput.trim()) return;
-    setComments([...comments, { text: commentInput, user: "You" }]);
+
+    setComments([
+      ...comments,
+      {
+        text: commentInput,
+        user: "You",
+      },
+    ]);
+
     setCommentInput("");
   };
 
-  // 🔹 Generate embed code for current video
   const generateEmbedCode = () => {
     const code = `<iframe width="560" height="315" src="${currentVideo.url}" title="${currentVideo.title}" frameborder="0" allowfullscreen></iframe>`;
     setEmbedCode(code);
@@ -71,45 +92,56 @@ export default function Watch() {
   return (
     <div className="watch-container">
       <div className="watch-layout">
+
         {/* LEFT SIDE */}
         <div className="watch-main">
-          <video
-            ref={videoRef}
-            key={currentVideo.id}
-            className="watch-video"
-            controls
-          >
-            <source src={currentVideo.url} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+
+          {/* PLAYER */}
+          <div className="watch-video">
+            <Plyr
+              source={videoSource}
+              options={{
+                controls: [
+                  "play-large",
+                  "play",
+                  "progress",
+                  "current-time",
+                  "mute",
+                  "volume",
+                  "settings",
+                  "fullscreen",
+                ],
+                settings: ["speed"],
+              }}
+            />
+          </div>
 
           <h2 className="video-title">{currentVideo.title}</h2>
 
           <div className="video-meta">
-            <span>
-              {currentVideo.views} • {currentVideo.date}
-            </span>
+            {currentVideo.views} • {currentVideo.date}
           </div>
 
+          {/* ACTION BUTTONS */}
           <div className="video-actions">
             <button onClick={() => setLikes(likes + 1)}>👍 {likes}</button>
             <button onClick={() => setDislikes(dislikes + 1)}>👎 {dislikes}</button>
-            {/* 🔹 Share button */}
             <button onClick={generateEmbedCode}>🔗 Share</button>
           </div>
 
-          {/* 🔹 Show generated embed code */}
+          {/* EMBED CODE */}
           {embedCode && (
             <div className="embed-box">
               <h4>Embed this video:</h4>
               <textarea
                 readOnly
                 value={embedCode}
-                onClick={(e) => e.target.select()} // Select code on click
+                onClick={(e) => e.target.select()}
               />
             </div>
           )}
 
+          {/* CHANNEL INFO */}
           <div className="channel-box">
             <div>
               <h4>{currentVideo.channel}</h4>
@@ -118,8 +150,10 @@ export default function Watch() {
             <button className="subscribe-btn">Subscribe</button>
           </div>
 
+          {/* COMMENTS */}
           <div className="comments-section">
             <h3>{comments.length} Comments</h3>
+
             <div className="comment-input">
               <input
                 type="text"
@@ -129,6 +163,7 @@ export default function Watch() {
               />
               <button onClick={addComment}>Post</button>
             </div>
+
             {comments.map((c, index) => (
               <div key={index} className="comment">
                 <strong>{c.user}</strong>
@@ -138,9 +173,10 @@ export default function Watch() {
           </div>
         </div>
 
-        {/* RIGHT SIDE (Recommended Videos) */}
+        {/* RIGHT SIDE */}
         <div className="watch-sidebar">
           <h3>Recommended</h3>
+
           {videos.map((video, index) => (
             <div
               key={video.id}
@@ -149,10 +185,12 @@ export default function Watch() {
               }`}
               onClick={() => {
                 setCurrentVideoIndex(index);
-                setEmbedCode(""); // Clear previous embed when switching video
+                setEmbedCode("");
+                window.scrollTo(0, 0);
               }}
             >
               <img src={video.thumbnail} alt="thumb" />
+
               <div>
                 <h4>{video.title}</h4>
                 <p>{video.channel}</p>
@@ -161,6 +199,7 @@ export default function Watch() {
             </div>
           ))}
         </div>
+
       </div>
     </div>
   );

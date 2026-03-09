@@ -1,22 +1,36 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./Components/Navbar";
-import Footer from "./Components/Footer";
+
+import MainLayout from "./Layout/MainLayout";
+
 import LandingPage from "./Pages/LandingPage";
-import Watch from "./Pages/Watch"; // 👈 VERY IMPORTANT
+import Watch from "./Pages/Watch";
+import Owner from "./Pages/Owner";
 
 function App() {
-  const isEmbed = window.self !== window.top;
+
   return (
+
     <Router>
-      {!isEmbed && <Navbar />}
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-      <Route path="/watch/:id" element={<Watch />} />
-      </Routes>
-      {!isEmbed && <Footer />}
+
+      <MainLayout>
+
+        <Routes>
+
+          <Route path="/" element={<LandingPage />} />
+
+          <Route path="/watch/:id" element={<Watch />} />
+
+          <Route path="/owner" element={<Owner />} />
+
+        </Routes>
+
+      </MainLayout>
+
     </Router>
+
   );
+
 }
 
 export default App;

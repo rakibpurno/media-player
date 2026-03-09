@@ -86,7 +86,7 @@ settings:["speed"]
 
 {/* VIDEO LIST */}
 
-<div className="video-list">
+<div className="hero-video-list">
 
 <h3>Recommended</h3>
 
@@ -94,7 +94,7 @@ settings:["speed"]
 
 <div
 key={video.id}
-className={`video-card ${index===currentIndex ? "active" : ""}`}
+className={`hero-video-card ${index===currentIndex ? "active" : ""}`}
 onClick={()=>setCurrentIndex(index)}
 >
 

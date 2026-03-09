@@ -34,7 +34,7 @@ margin-top:10px;
 
 /* VIDEO LIST */
 
-.video-list{
+.hero-video-list{
 background:rgba(0,0,0,0.4);
 padding:20px;
 border-radius:15px;
@@ -42,7 +42,7 @@ width:100%;
 }
 
 
-.video-card{
+.hero-video-card{
 display:flex;
 gap:10px;
 margin-bottom:15px;
@@ -53,17 +53,17 @@ align-items:center;
 transition:0.2s;
 }
 
-.video-card img{
+.hero-video-card img{
 
 width:120px;
 border-radius:8px;
 }
 
-.video-card:hover{
+.hero-video-card:hover{
 background:#333;
 }
 
-.video-card.active{
+.hero-video-card.active{
 background:#9333ea;
 }
 

@@ -5,8 +5,11 @@ import Pricing from "../Components/Pricing";
 import About from "../Components/About";
 
 export default function LandingPage() {
+
   return (
-    <div>
+
+    <>
+
       <section id="home" className="section">
         <Hero />
       </section>
@@ -22,6 +25,9 @@ export default function LandingPage() {
       <section id="about" className="section">
         <About />
       </section>
-    </div>
+
+    </>
+
   );
+
 }
